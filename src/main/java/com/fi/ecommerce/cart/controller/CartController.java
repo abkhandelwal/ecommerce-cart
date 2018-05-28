@@ -102,7 +102,7 @@ public class CartController {
 	}*/
 	
 	
-	   @RequestMapping(method= RequestMethod.GET, consumes=MediaType.APPLICATION_JSON_VALUE)
+	   @RequestMapping(method= RequestMethod.GET)
 		public Iterable<Cart> removeAll() {
 			
 		  return repos.findAll();
