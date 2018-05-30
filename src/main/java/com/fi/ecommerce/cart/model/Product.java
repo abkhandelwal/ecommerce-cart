@@ -1,5 +1,6 @@
 package com.fi.ecommerce.cart.model;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.annotation.Id;
 
 public class Product {
@@ -9,7 +10,8 @@ public class Product {
 	private String name;
 	private String category;
 	private String imgUrl;
-	private int price;
+	private float price;
+	@Value(value = "1")
 	private int quantity;
 	public String getId() {
 		return id;
@@ -35,7 +37,7 @@ public class Product {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-	public int getPrice() {
+	public float getPrice() {
 		return price;
 	}
 	public void setPrice(int price) {
